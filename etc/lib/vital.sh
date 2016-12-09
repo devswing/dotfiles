@@ -1,13 +1,17 @@
 #!/bin/bash
-#                                    
-#         _ _        _       _       
-#        (_) |      | |     | |      
-#  __   ___| |_ __ _| |  ___| |__    
-#  \ \ / / | __/ _` | | / __| '_ \   
-#   \ V /| | || (_| | |_\__ \ | | |  
-#    \_/ |_|\__\__,_|_(_)___/_| |_|  
-#                                    
-#        
+#
+#         _ _        _       _
+#        (_) |      | |     | |
+#  __   ___| |_ __ _| |  ___| |__
+#  \ \ / / | __/ _` | | / __| '_ \
+#   \ V /| | || (_| | |_\__ \ | | |
+#    \_/ |_|\__\__,_|_(_)___/_| |_|
+#
+#
+
+vitalize() {
+    return 0
+}
 
 e_arrow() {
     printf " \033[37;1m%s\033[m\n" "➜ $*"
@@ -114,4 +118,14 @@ is_exists() {
 # has is wrapper function
 has() {
     is_exists "$@"
+}
+
+# is_tmux_runnning returns true if tmux is running
+is_tmux_running() {
+    [ ! -z "$TMUX" ]
+}
+
+# is_ssh_running returns true if the ssh deamon is available
+is_ssh_running() {
+    [ ! -z "$SSH_CLIENT" ]
 }

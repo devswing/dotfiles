@@ -3,11 +3,15 @@ tap 'homebrew/bundle'
 brew 'git'
 brew 'nodebrew'
 brew 'openssl'
+brew 'reattach-to-user-namespace'
 brew 'tmux'
 brew 'tree'
 brew 'vim', args: ['with-lua', 'with-luajit']
 brew 'wget'
 brew 'zsh'
+
+tap 'jhawthorn/fzy'
+brew 'fzy'
 
 tap 'caskroom/cask'
 
