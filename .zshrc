@@ -4,6 +4,10 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 
 source $ZPLUG_HOME/init.zsh
 
+zplug "~/.zsh", \
+    from:local, \
+    nice:2
+
 zplug "junegunn/fzf-bin", \
     as:command, \
     from:gh-r, \
