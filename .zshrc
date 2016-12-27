@@ -56,7 +56,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "~/.zsh", \
     from:local, \
-    nice:2
+    defer:2
 
 zplug "junegunn/fzf-bin", \
     as:command, \
@@ -81,7 +81,7 @@ zplug "zsh-users/zsh-completions"
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 zplug "zsh-users/zsh-syntax-highlighting", \
-    nice:10
+    defer:3
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -91,4 +91,4 @@ if ! zplug check --verbose; then
   fi
 fi
 
-zplug load --verbose
+zplug load
