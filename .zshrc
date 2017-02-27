@@ -50,6 +50,12 @@ fi
 # automatically when your are in zsh
 $DOTPATH/bin/tmuxx
 
+# node
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# python
+export PATH=/usr/local/bin:/usr/local/share/python:$PATH
+
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
